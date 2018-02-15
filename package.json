@@ -2,7 +2,7 @@
   "name": "@pigalle/transporters.base",
   "version": "0.1.0-alpha1",
   "description": "Base module used by Pigalle transporters",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "npm test"
   },
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/pigalle-io/pigalle.transporters.base/issues"
   },
-  "homepage": "https://github.com/pigalle-io/pigalle.transporters.base#readme"
+  "homepage": "https://github.com/pigalle-io/pigalle.transporters.base#readme",
+  "dependencies": {
+    "@pigalle/core.base.class": "0.1.0-alpha2"
+  }
 }
