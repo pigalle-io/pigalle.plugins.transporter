@@ -1,27 +1,65 @@
 {
   "name": "@pigalle/transporters.base",
-  "version": "0.1.0-alpha1",
-  "description": "Base module used by Pigalle transporters",
-  "main": "lib/index.js",
+  "version": "0.1.0",
+  "description": "A base class necessarily used by Pigalle transporters.",
+  "main": "lib/transporter-base.js",
   "scripts": {
-    "test": "npm test"
+    "test": "nyc mocha",
+    "lint": "node ./node_modules/standard/bin/cmd.js --fix",
+    "docs": "node ./node_modules/gulp/bin/gulp.js docs",
+    "coverage": "npm run test && nyc report --reporter=text-lcov | coveralls",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
+  "pre-commit": [
+    "precommit-msg",
+    "lint",
+    "test",
+    "coverage"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pigalle-io/pigalle.transporters.base.git"
   },
   "keywords": [
-    "pigalle",
-    "transporter",
-    "base"
+    [
+      "node",
+      "javascript",
+      "microlibrary",
+      "base",
+      "class",
+      "oop",
+      "transporter",
+      "pigalle",
+      "pigalle.io"
+    ]
   ],
-  "author": "9 Février <contact@9fevrier.com>",
+  "author": "SAS 9 Février <contact@9fevrier.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pigalle-io/pigalle.transporters.base/issues"
   },
   "homepage": "https://github.com/pigalle-io/pigalle.transporters.base#readme",
+  "devDependencies": {
+    "JSONPath": "^0.11.2",
+    "coveralls": "^3.0.0",
+    "current-git-branch": "^1.0.1",
+    "fs-then-native": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-mustache-plus": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "jsdoc-to-markdown": "^4.0.1",
+    "mocha": "^5.0.1",
+    "nyc": "^11.4.1",
+    "pre-commit": "^1.2.2",
+    "require-dir": "^1.0.0",
+    "should": "^13.2.1",
+    "standard": "^11.0.0",
+    "github-uri-https-parser": "^0.1.1-alpha1"
+  },
   "dependencies": {
-    "@pigalle/core.base.class": "0.1.0-alpha2"
+    "@9fv.io/notimplemented-error": "^1.0.0",
+    "@pigalle/core.base.class": "^0.3.1",
+    "lodash": "^4.17.5"
   }
 }
