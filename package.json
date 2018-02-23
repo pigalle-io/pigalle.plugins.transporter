@@ -1,6 +1,6 @@
 {
   "name": "@pigalle/plugins.transporter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A base plugin necessarily used by Pigalle transporters.",
   "main": "lib/transporter-plugin-base.js",
   "scripts": {
@@ -60,6 +60,6 @@
     "github-uri-https-parser": "^0.1.1-alpha1"
   },
   "dependencies": {
-    "@pigalle/entities.plugin.bootable": "*"
+    "@pigalle/entities.plugin.bootable": "^0.1.1"
   }
 }
