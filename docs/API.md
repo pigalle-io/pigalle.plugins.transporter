@@ -60,6 +60,6 @@ A bootable entity to take care of transport.
 
 ***
 
-_Documentation generated on Fri, 23 Feb 2018 20:47:03 GMT_
+_Documentation generated on Sat, 24 Feb 2018 09:36:49 GMT_
 
 **Copyright &copy; 2018 [SAS 9 Février](https://9fevrier.com/)**
